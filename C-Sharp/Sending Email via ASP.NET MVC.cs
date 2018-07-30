@@ -1,4 +1,12 @@
- public ActionResult send_email(string name, string email,string Body,string Subject)
+using System.Net.Mail;
+
+
+namespace projectName.Controllers
+{
+    public class HomeController : Controller
+    {
+
+         public ActionResult send_email(string name, string email,string Body,string Subject)
         {
 
             ViewBag.name = name;
@@ -31,3 +39,5 @@
             }
                 return RedirectToAction("index");
         }
+    }
+}
